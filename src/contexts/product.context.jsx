@@ -2,7 +2,6 @@ import { createContext, useState, useEffect } from "react";
 
 import PRODUCTS from '../shop-data.json';
 
-
 export const ProductContext = createContext({
     products: []
 });
