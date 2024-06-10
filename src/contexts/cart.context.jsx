@@ -64,11 +64,12 @@ export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
     const [cartTotal, setCartTotal] = useState(0);
 
-    useEffect(() => {
+      useEffect(() => {
         const newCartTotal = cartItems.reduce(
-        (finalAmount, cartItem) => finalAmount + cartItem.quantity * cartItem.price,
-        0);
-    setCartTotal(newCartTotal);
+            (finalAmount, cartItem) => finalAmount + cartItem.quantity * cartItem.price,
+            0
+        );
+        setCartTotal(newCartTotal);
     }, [cartItems]);
 
     const addItemsToCart = (productToAdd) => {
@@ -90,7 +91,7 @@ export const CartProvider = ({ children }) => {
     const value = useMemo(() => ({
         isCartOpen, setIsCartOpen, addItemsToCart, cartItems,
         removeItemsFromCart, getCartItemsCount, deleteFromBasket, cartTotal,
-    }), [isCartOpen, cartItems]);
+    }), [isCartOpen, cartItems, cartTotal]);
     // console.log("cartItems:", cartItems);
 
     return <CartContext.Provider value={value}>{children}</CartContext.Provider> 

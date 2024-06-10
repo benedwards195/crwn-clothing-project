@@ -3,7 +3,7 @@ import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import FormInput from '../../components/form-input/form-input.component';
-import Button from '../../components/button/button.component';
+import Button, {button_type_classes} from '../../components/button/button.component';
 
 
 import { signInAuthUserWithEmailAndPassword, createUserDocumentFromAuth, signInWithGooglePopup } from '../../utils/firebase/firebase.utils';
@@ -78,7 +78,7 @@ const SignInForm = () => {
                 name='password' 
                 value={password} />
                 <Button type='submit' buttonType='sign-in'>Sign In</Button>
-                <Button type='button' buttonType='google' onClick={signInWithGoogle}>Google Sign In</Button>
+                <Button buttonType={button_type_classes.google} onClick={signInWithGoogle}>Google Sign In</Button>
             </form>
         </div>
     )

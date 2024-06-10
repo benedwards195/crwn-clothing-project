@@ -4,7 +4,7 @@ import { useContext } from 'react';
 
 import { CartContext } from '../../contexts/cart.context';
 
-import Button from '../button/button.component';
+import Button, {button_type_classes} from '../button/button.component';
 // import { set } from 'firebase/database';
 
 const ProductCard = ({ product }) => {
@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => {
             </span>
             <span className='price'>{price}</span>
         </div>
-        <Button buttonType='inverted' onClick={addProductToCart}>Add To Cart</Button>
+        <Button buttonType={button_type_classes.inverted} onClick={addProductToCart}>Add To Cart</Button>
     </div>
     );
 };
