@@ -17,6 +17,7 @@ export const BaseButton = styled.button`
   cursor: pointer;
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 
   &:hover {
     background-color: white;
@@ -39,6 +40,7 @@ export const InvertedButton = styled(BaseButton)`
   background-color: white;
   color: black;
   border: 1px solid black;
+  margin-bottom: 30px;
 
   &:hover {
     background-color: black;
