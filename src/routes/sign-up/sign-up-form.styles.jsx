@@ -1,4 +1,6 @@
-.sign-up-container {
+import styled from 'styled-components';
+
+export const SignUpContainer = styled.div`    
     display: flex;
     flex-direction: column;
     width: 380px;
@@ -10,4 +12,4 @@
         text-decoration: underline;
         color: #0000ff;
     }
-}
+`;

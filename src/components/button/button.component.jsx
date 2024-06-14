@@ -5,6 +5,7 @@ export const button_type_classes = {
     google: 'google',
     inverted: 'inverted',
     signin: 'sign-in',
+    signup: 'signup',
 }
 
 const getButton = (buttonType = button_type_classes.base) => (
@@ -13,6 +14,7 @@ const getButton = (buttonType = button_type_classes.base) => (
         [button_type_classes.google]: GoogleButton,
         [button_type_classes.inverted]: InvertedButton,
         [button_type_classes.signin]: BaseButton,
+        [button_type_classes.signup]: BaseButton,
     }[buttonType]);
 
 const Button = ({ children, buttonType, ...otherProps }) => {

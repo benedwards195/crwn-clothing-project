@@ -1,4 +1,6 @@
-.directory-container {
+import styled from 'styled-components';
+
+ export const DirectoryContainer = styled.div`
    
     width: 100%;
     display: flex;
@@ -6,4 +8,4 @@
     justify-content: space-between; 
     align-items: center; 
     margin: 0 auto;
-}
+`;
